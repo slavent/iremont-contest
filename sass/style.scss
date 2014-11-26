@@ -1,9 +1,124 @@
-@import "b-main";
+@import "normalize";
 
-$color: #333;
+$body_bg: url(../img/bg.jpg);
+$menu_link_color: #fff;
+
+@mixin border-radius($radius) {
+  	-webkit-border-radius: $radius;
+  	-moz-border-radius: $radius;
+   	-ms-border-radius: $radius;
+   	border-radius: $radius;
+}
 
 body{
-	color: $color;
-	margin: 0;
-	padding: 0;
+	background: $body_bg;
 }
+
+#wrapper{
+	width: 940px;
+	margin: auto;
+}
+
+#bg-balls{
+	width: 967px;
+	height: 603px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: url(../img/bg_balls.png);
+}
+
+/* START: Header */
+
+header{
+	height: 100px;
+	position: relative;
+	z-index: 10;
+}
+
+/* END: Header */
+
+/* START: Menu */
+
+nav{
+
+	ul{
+
+		li{
+			float: left;
+			list-style: none;
+
+			a{
+				color: $menu_link_color;
+				font: 16px Arial;
+				text-decoration: none;
+				text-align: center;
+				display: block;
+				height: 55px;
+
+				&.item-1{
+					background: url(../img/bg1.png) no-repeat;
+					width: 129px;
+					margin: 15px 12px 0;
+					padding: 14px 0 0;
+				}
+
+				&.item-2{
+					background: url(../img/bg2.png) no-repeat;
+					width: 99px;
+					margin: 13px 16px 0;
+					padding: 14px 0 0;
+				}
+
+				&.item-3{
+					background: url(../img/bg3.png) no-repeat;
+					width: 121px;
+					margin: 13px 16px 0;
+					padding: 14px 0 0;
+				}
+
+				&.item-4{
+					background: url(../img/bg4.png) no-repeat;
+					width: 101px;
+					margin: 13px 16px 0;
+					padding: 14px 0 0;
+				}
+
+				&.item-5{
+					background: url(../img/bg5.png) no-repeat;
+					width: 250px;
+					padding: 22px 0 0;
+				}
+
+				&.imprtnt{
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}
+
+/* END: Menu */
+
+/* START: Main */
+
+main{
+	width: 100%;
+	min-height: 400px;
+	position: relative;
+	z-index: 50;
+	background: none;
+	border: 2px solid #cecece;
+	@include border-radius(20px);
+}
+
+/* END: Main */
+
+/* START: Footer */
+
+footer{
+	display: none;
+}
+
+/* END: Footer */
